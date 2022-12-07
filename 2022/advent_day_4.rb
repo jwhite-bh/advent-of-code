@@ -1,4 +1,3 @@
-require 'pry'
 def contained(ranges)
   range_one = (ranges[0]..ranges[1])
   range_two = (ranges[2]..ranges[3])

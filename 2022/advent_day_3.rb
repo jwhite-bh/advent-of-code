@@ -8,7 +8,7 @@ def get_char_val(char)
   value + char_array.find_index(char.downcase) + 1
 end
 
-file = File.open('2022_3.txt')
+file = File.open('inputs/2022_3.txt')
 
 file_data = file.readlines.map(&:chomp).reject { |x| x.empty? }
 

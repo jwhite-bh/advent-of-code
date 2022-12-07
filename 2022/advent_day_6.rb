@@ -1,6 +1,6 @@
-file = File.open('2022_6.txt')
+file = File.open('inputs/2022_6.txt')
 
-file_data = file.readlines.map(&:chomp).first.split('')
+file_data = file.read.split('')
 
 file_data.each_with_index do |char, i|
   # First Puzzle

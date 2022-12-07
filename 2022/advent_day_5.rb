@@ -1,4 +1,4 @@
-file = File.open('2022_5.txt')
+file = File.open('inputs/2022_5.txt')
 
 file_data = file.readlines.map(&:chomp)
 
