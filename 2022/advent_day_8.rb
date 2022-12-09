@@ -1,13 +1,13 @@
-def visible_up_down?(row, col_i, tree)
+def visible_vertical?(row, col_i, tree)
   row[0..col_i - 1].max < tree || row[col_i + 1, row.size].max < tree
 end
 
-def visible_left_right?(col, row_i, tree)
+def visible_horizontal?(col, row_i, tree)
   col[0..row_i - 1].max < tree || col[row_i + 1, col.size].max < tree
 end
 
 def visible?(row, col, row_i, col_i, tree)
-  visible_left_right?(row, col_i, tree) || visible_up_down?(col, row_i, tree)
+  visible_vertical?(row, col_i, tree) || visible_horizontal?(col, row_i, tree)
 end
 
 def scenic_score(row, col, row_i, col_i, tree)
