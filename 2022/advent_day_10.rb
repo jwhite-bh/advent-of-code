@@ -18,7 +18,7 @@ row = ''
 
 file_data.each do |ins|
   (1..ins.split.size).each do |i|
-    row += sprite_vis?(cycle % 40, addx) ? '#' : '.'
+    row += sprite_vis?(cycle % 40, addx) ? '#' : ' '
 
     cycle += 1
 
