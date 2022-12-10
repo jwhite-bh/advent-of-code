@@ -18,7 +18,7 @@ end
 
 cycle = 0
 addx = 1
-sig_str = []
+sig_str_sum = 0
 row = ''
 
 file_data.each do |ins|
@@ -29,12 +29,12 @@ file_data.each do |ins|
 
     row = reset_row(row) if div_forty?(cycle)
 
-    sig_str.push(addx * cycle) if div_forty?(cycle + 20)
+    sig_str_sum += addx * cycle if div_forty?(cycle + 20)
 
     addx += ins.split(' ').last.to_i if i == 2
   end
 end
 
-puts "\nSignal Strengths: #{sig_str.sum}"
+puts "\nSignal Strengths: #{sig_str_sum}"
 
 file.close
