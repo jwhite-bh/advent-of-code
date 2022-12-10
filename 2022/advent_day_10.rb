@@ -11,11 +11,6 @@ def sprite_vis?(row_i, addx)
   (row_i - addx).abs <=1
 end
 
-def reset_row(row)
-  puts row
-  ''
-end
-
 cycle = 0
 addx = 1
 sig_str_sum = 0
@@ -27,14 +22,15 @@ file_data.each do |ins|
 
     cycle += 1
 
-    row = reset_row(row) if div_forty?(cycle)
+    row += "\n" if div_forty?(cycle)
 
     sig_str_sum += addx * cycle if div_forty?(cycle + 20)
 
-    addx += ins.split(' ').last.to_i if i == 2
+    addx += ins.split.last.to_i if i == 2
   end
 end
 
+puts row
 puts "\nSignal Strengths: #{sig_str_sum}"
 
 file.close
