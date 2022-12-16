@@ -86,7 +86,6 @@ until full
     at_rest, x, y = next_position(x, y)
   end
 
-
   units += 1
   @matrix[y][x] = 'o'
 
